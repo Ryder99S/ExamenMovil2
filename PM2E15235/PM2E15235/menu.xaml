@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E15235.menu">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DeepSkyBlue" Padding="24" CornerRadius="0">
+                <Label Text="Examen" HorizontalTextAlignment="Center" TextColor="black" FontSize="40"/>
+            </Frame>
+
+            <Button BackgroundColor="#5DADE2" x:Name="btnUbicacion" Clicked="btnUbicacion_Clicked" Text="Ubicaciones"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E15235.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nueva Ubicacion" x:Name="nuevaUbicacion" Clicked="nuevaUbicacion_Clicked"></ToolbarItem>
+
+        <ToolbarItem Text="Ubicaciones Salvadas" x:Name="ubicacionesSalvadas" Clicked="ubicacionesSalvadas_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Bienvenidos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Latitud Actual"></Label>
+        <Label x:Name="txtLatitud" ></Label>
+
+        <Label Text="Longitud Actual"></Label>
+        <Label x:Name="txtLongitud" ></Label>
+
+        <Label Text="Describa la Ubicacion"></Label>
+        <Editor x:Name="txtUbicacion" Placeholder="Descripcion Ubicacion" />
+
+        <Label Text="Descripcion Corta"></Label>
+        <Entry x:Name="txtCorta" Placeholder="Descripcion Corta"></Entry>
+
+        <Button x:Name="btnGuardar" Text="Salvar Ubicacion" Clicked="btnGuardar_Clicked"></Button>
+        <Button x:Name="btnUbicaciones" Text="Ubicaciones Salvadas" Clicked="btnUbicaciones_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

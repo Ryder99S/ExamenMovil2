@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E15235.listaUbicaciones">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Center" FontSize="20"  Text="Ubicaciones" TextColor="DarkBlue"></Label>
+            <ListView x:Name="listUbicaciones" ItemSelected="listUbicaciones_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding id}" Grid.Row="0" Grid.Column="0" TextColor="Black"></Label>
+                                <Label Text="{Binding latitud}" Grid.Row="0" Grid.Column="1" TextColor="Black"></Label>
+                                <Label Text="{Binding longitud}" Grid.Row="0" Grid.Column="2" TextColor="Black"></Label>
+                                <Label Text="{Binding descripcionLarga}" Grid.Row="0" Grid.Column="3" TextColor="Black"></Label>
+                                <Label Text="{Binding descripcionCorta}" Grid.Row="0" Grid.Column="4" TextColor="Black"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Eliminar" x:Name="btneliminar" Clicked="btneliminar_Clicked" IsVisible="False"></Button>
+            <Button Text="Ver Mapa" x:Name="btnmapa" Clicked="btnmapa_Clicked" IsVisible="False"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
